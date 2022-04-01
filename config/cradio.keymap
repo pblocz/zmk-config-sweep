@@ -37,25 +37,25 @@
 	
         combo_cut {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <21 23>;
             bindings = <&kp LC(X)>;
         };  
 	
         combo_copy {
             timeout-ms = <50>;
-            key-positions = <20 22>;
+            key-positions = <21 22>;
             bindings = <&kp LC(C)>;
         };  
 	
         combo_paste {
             timeout-ms = <50>;
-            key-positions = <21 22>;
+            key-positions = <22 23>;
             bindings = <&mt LS(LC(V)) LC(V)>;
         }; 
         combo_bs_left {
             timeout-ms = <50>;
             key-positions = <5 6>;
-            layers = <NAV_L>;
+            layers = <0>;
             bindings = <&kp LC(BSPC)>;
         }; 
 	
@@ -74,13 +74,13 @@
         combo_rbrac {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            layers = <NUM_L>;
+            layers = <0>;
             bindings = <&mt RBRC RBKT>;
         }; 
         combo_lbrac {
             timeout-ms = <50>;
             key-positions = <11 12>;
-            layers = <NUM_L>;
+            layers = <0>;
             bindings = <&mt LBRC LBKT>;
         };  
     };
