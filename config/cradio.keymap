@@ -77,8 +77,6 @@
             layers = <0>;
             bindings = <&mt LBRC LBKT>;
         };  
-	
-	
        combo_lparV {
             timeout-ms = <50>;
             key-positions = <3 13>;
