@@ -1,124 +1,181 @@
-/*
- * Copyright (c) 2021 Pete Johanson
- *
- * SPDX-License-Identifier: MIT
- */
+#define DEFAULT  0
+#define NUM_MODS 1
+#define BT_CTRL  2
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 
-#define NAV_L 1
-#define OTH_L 2
-#define NUM_L 3
-#define SYM_L 4
-#define MED_L 5
-#define FUN_L 6
+#define CE 2
+#define CR 3
+#define CU 6
+#define CI 7
+#define CD 12
+#define CF 13
+#define CG 14
+#define CH 15
+#define CJ 16
+#define CK 17
+#define CC 22
+#define CV 23
+#define CM 26
+#define CCOMMA 27
 
-// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
-&lt { quick_tap_ms = <200>; };
 
 / {
     combos {
         compatible = "zmk,combos";
-
-        med_mo {
-	    timeout-ms = <50>;
-            key-positions = <30 31>;
-            bindings = <&mo MED_L>;
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <CD CF>; // KP: D F
+            bindings = <&kp ESC>;
         };
-
-        fn_mo {
-	    timeout-ms = <50>;
-            key-positions = <32 33>;
-            bindings = <&mo FUN_L>;
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <CJ CK>; // KP: J K
+            bindings = <&kp TAB>;
         };
-
-    };
-
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "homerow mods";
-            #binding-cells = <2>;
-            tapping_term_ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <CD CV>; // KP: D V
+            bindings = <&kp LPAR>;
         };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            label = "Base";
-            bindings = <
-                &kp Q     &kp W      &kp E       &kp R          &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
-                &hm LGUI A &hm LALT S &hm LSHFT D &hm LCTRL F    &kp G         &kp H            &hm RCTRL J  &hm RSHFT K &hm LALT L &hm LGUI QUOT
-                &kp Z      &kp X      &kp C       &kp V          &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH
-                                                  &lt NAV_L SPACE  &lt OTH_L TAB &lt NUM_L BKSP  &lt SYM_L RET
-            >;
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <CK CM>; // KP: K M
+            bindings = <&kp RPAR>;
         };
-
-        nav_layer {
-            label = "Nav";
-            bindings = <
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp LARW       &kp DARW    &kp UARW   &kp RARW
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &kp PG_DN   &kp PG_UP  &kp END
-                                                  &trans          &trans       &kp ESC          &kp DEL
-            >;
+        combo_minus {
+            timeout-ms = <50>;
+            key-positions = <CE CF>; // KP: E F
+            bindings = <&mt UNDER MINUS>;
         };
-
-        other_layer {
-            label = "Other";
-            bindings = <
-                &trans	   &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &bt BT_CLR
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &trans
-                &trans     &trans     &trans      &trans          &trans       &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-                                                  &trans          &trans       &trans           &trans
-            >;
+        combo_at {
+            timeout-ms = <50>;
+            key-positions = <CF CJ>; // KP: F J
+            bindings = <&kp AT>;
         };
-
-        num_layer {
-            label = "Num";
-            bindings = <
-                &kp LBKT   &kp N7     &kp N8      &kp N9          &kp RBKT      &trans          &trans         &trans      &trans     &trans
-                &kp SEMI   &kp N4     &kp N5      &kp N6          &kp EQUAL     &trans          &trans         &trans      &trans     &trans
-                &kp GRAVE  &kp N1     &kp N2      &kp N3          &kp BSLH      &trans          &trans         &trans      &trans     &trans
-                                                  &kp N0          &kp MINUS     &trans          &trans
-            >;
+        combo_amps {
+            timeout-ms = <50>;
+            key-positions = <CD CK>; // KP: D K
+            bindings = <&kp AMPS>;
         };
-
-        sym_layer {
-            label = "Sym";
-            bindings = <
-                &kp LBRC     &kp LS(N7)  &kp LS(N8)  &kp LS(N9) &kp RBRC        &trans &trans   &trans    &trans    &trans
-                &kp COLON    &kp LS(N4)  &kp LS(N5)  &kp LS(N6) &kp PLUS        &trans &trans   &trans    &trans    &trans
-                &kp TILDE    &kp LS(N1)  &kp LS(N2)  &kp LS(N3) &kp LS(BSLH)    &trans &trans   &trans    &trans    &trans
-                                                   &kp LS(N0) &kp UNDER         &trans &trans
-            >;
+        combo_EXCL {
+            timeout-ms = <50>;
+            key-positions = <CG CH>; // KP: G H
+            bindings = <&kp EXCL>;
         };
-
-        media_layer {
-            label = "Media";
-            bindings = <
-                &trans	   &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp C_PREV     &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans       &trans       &trans
-                                                  &trans          &trans       &kp C_STOP       &kp C_PLAY_PAUSE
-            >;
+        combo_equal {
+            timeout-ms = <50>;
+            key-positions = <CI CJ>; // KP: I J
+            bindings = <&mt PLUS EQUAL>;
         };
-
-        fun_layer {
-            label = "Fun";
-            bindings = <
-                &kp F12     &kp F7     &kp F8      &kp F9     &kp PSCRN         &trans          &trans         &trans      &trans     &trans
-                &kp F11     &kp F4     &kp F5      &kp F6     &kp SLCK          &trans          &trans         &trans      &trans     &trans
-                &kp F10     &kp F1     &kp F2      &kp F3     &kp PAUSE_BREAK   &trans          &trans         &trans      &trans     &trans
-                                                   &none      &none             &trans          &trans
-            >;
+        combo_dollar {
+            timeout-ms = <50>;
+            key-positions = <CE CR>;
+            bindings = <&kp DLLR>; // KP: E R
+        };
+        combo_percent {
+            timeout-ms = <50>;
+            key-positions = <CU CI>; // KP: U I
+            bindings = <&kp PRCNT>;
+        };
+        combo_grave {
+            timeout-ms = <50>;
+            key-positions = <CM CCOMMA>; // KP: M ,
+            bindings = <&mt TILDE GRAVE>;
+        };
+        combo_pipe {
+            timeout-ms = <50>;
+            key-positions = <CC CV>; // KP: C V
+            bindings = <&mt BSLH PIPE>;
+        };
+        combo_lbkt2 {
+            timeout-ms = <50>;
+            key-positions = <CD CG>; // KP: D G
+            bindings = <&mt LBRC LBKT>;
+        };
+        combo_rbkt2 {
+            timeout-ms = <50>;
+            key-positions = <CH CK>; // KP: H K
+            bindings = <&mt RBRC RBKT>;
+        };
+        combo_under {
+            timeout-ms = <50>;
+            key-positions = <CR CD>; // KP: R D
+            bindings = <&kp UNDER>;
+        };
+        combo_plus {
+            timeout-ms = <50>;
+            key-positions = <CU CK>; // KP: U K
+            bindings = <&kp PLUS>;
+        };
+        combo_hash {
+            timeout-ms = <50>;
+            key-positions = <CR CJ>; // KP: R J
+            bindings = <&kp HASH>;
+        };
+        combo_star {
+            timeout-ms = <50>;
+            key-positions = <CU CF>; // KP: U F
+            bindings = <&kp STAR>;
         };
     };
+
+        behaviors {
+                hm: homerow_mods {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HOMEROW_MODS";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <250>;
+                        quick_tap_ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                };
+                hl: homerow_layers {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HOMEROW_LAYERS";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick_tap_ms = <100>;
+                        flavor = "tap-preferred";
+                        bindings = <&mo>, <&kp>;
+                };
+                tabspace: tab_space  {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "TAB_SPACE";
+                        #binding-cells = <0>;
+                        bindings = <&mt LSHIFT SPACE>, <&kp TAB>;
+                        mods = <(MOD_LALT | MOD_RALT)>;
+                };
+        };
+
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+                        bindings = <
+    &kp Q       &kp W      &kp E     &kp R              &kp T             &kp Y     &kp U              &kp I        &kp O      &kp P
+    &hm LGUI A  &hm LALT S  &hm LCTRL D  &hl NUM_MODS F &kp G             &kp H     &hl NUM_MODS J     &hm LCTRL K  &hm LALT L &mt SQT DQT
+    &kp Z       &kp X      &kp C     &kp V              &kp B             &kp N     &kp M              &mt LT COMMA &mt GT DOT &mt QMARK FSLH
+                          &lt BT_CTRL BSPC    &mt LSHIFT ESC    &tabspace    &lt BT_CTRL ENTER
+                        >;
+                };
+
+                num_mods {
+                        bindings = <
+    &mt F7 N7   &mt F8 N8   &mt F9 N9    &kp F11        &kp F12       &none        &none        &none        &none        &none
+    &mt F4 N4   &mt F5 N5   &mt F6 N6    &none          &none         &none        &kp HASH     &kp STAR     &kp CARET    &mt SEMI COLON
+    &mt F1 N1   &mt F2 N2   &mt F3 N3    &mt F10 N0     &none         &none        &none        &trans       &trans       &trans
+                                   &kp DEL  &kp TAB     &trans          &trans
+                        >;
+                };
+
+                bt_control {
+                        bindings = <
+    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans   &kp HOME   &kp END    &trans     &kp PSCRN
+    &bt BT_CLR     &trans         &trans       &trans       &trans       &kp LEFT &kp DOWN   &kp UP     &kp RIGHT  &trans
+    &bootloader    &reset         &trans       &trans       &trans       &trans   &trans     &trans     &reset     &bootloader
+                                  &trans    &trans   &trans     &trans
+                        >;
+                };
+
+        };
 };
