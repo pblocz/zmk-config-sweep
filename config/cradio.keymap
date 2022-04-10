@@ -29,6 +29,13 @@
 #define CM 26
 #define CCOMMA 27
 
+&lt {
+    quick_tap_ms = <500>;
+};
+
+&mt {
+    quick_tap_ms = <500>;
+};
 
 / {
     combos {
@@ -145,7 +152,8 @@
                         label = "HOMEROW_LAYERS";
                         #binding-cells = <2>;
                         tapping-term-ms = <150>;
-                        quick_tap_ms = <100>;
+                        quick_tap_ms = <500>;
+                        quick-tap-ms = <500>;
                         flavor = "tap-preferred";
                         bindings = <&mo>, <&kp>;
                 };
