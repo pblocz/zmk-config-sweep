@@ -192,24 +192,24 @@
 
 };
 
-    &kscan0 {
-        input-gpios
-        = <&pro_micro  7 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro 18 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro 19 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro 20 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro 21 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro 15 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro 14 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro 16 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro 10 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro  0 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro  2 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro  3 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro  4 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro  5 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro  6 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro  8 (gpio_active_low | gpio_pull_up)>
-        , <&pro_micro  9 (gpio_active_low | gpio_pull_up)>
-        ;
-    };
+&kscan0 {
+    input-gpios
+    = <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    ;
+};
