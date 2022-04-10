@@ -190,7 +190,9 @@
 
         };
 
+};
 
+{
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
         label = "kscan";
@@ -214,6 +216,4 @@
         , <&pro_micro  9 (gpio_active_low | gpio_pull_up)>
         ;
     };
-
-
-};
+}
