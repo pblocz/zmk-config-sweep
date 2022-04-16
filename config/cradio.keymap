@@ -40,10 +40,10 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_esc {
+        combo_at {
             timeout-ms = <50>;
             key-positions = <CD CF>; // KP: D F
-            bindings = <&kp ESC>;
+            bindings = <&kp AT>;
         };
         combo_tab {
             timeout-ms = <50>;
@@ -65,14 +65,9 @@
             key-positions = <CE CF>; // KP: E F
             bindings = <&mt UNDER MINUS>;
         };
-        combo_at {
-            timeout-ms = <50>;
-            key-positions = <CF CJ>; // KP: F J
-            bindings = <&kp AT>;
-        };
         combo_amps {
             timeout-ms = <50>;
-            key-positions = <CD CK>; // KP: D K
+            key-positions = <CF CJ>; // KP: F J
             bindings = <&kp AMPS>;
         };
         combo_EXCL {
@@ -181,7 +176,7 @@
                         bindings = <
     &mt F7 N7   &mt F8 N8   &mt F9 N9    &kp F11        &kp F12       &none        &none        &none        &none        &none
     &mt F4 N4   &mt F5 N5   &mt F6 N6    &none          &none         &none        &kp HASH     &kp STAR     &kp CARET    &mt SEMI COLON
-    &mt F1 N1   &mt F2 N2   &mt F3 N3    &mt F10 N0     &none         &none        &none        &trans       &trans       &trans
+    &mt F1 N1   &mt F2 N2   &mt F3 N3    &mt F10 N0     &none         &none        &none        &trans       &key_repeat       &trans
                                    &kp DEL  &kp TAB     &trans          &trans
                         >;
                 };
@@ -190,7 +185,7 @@
                         bindings = <
     &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans   &kp HOME   &kp END    &trans       &kp PSCRN
     &bt BT_CLR     &trans         &trans       &trans       &trans       &kp LEFT &kp DOWN   &kp UP     &kp RIGHT    &trans
-    &bootloader    &reset         &trans       &trans       &trans       &trans   &trans     &trans     &key_repeat  &bootloader
+    &bootloader    &reset         &trans       &trans       &trans       &trans   &trans     &trans     &reset       &bootloader
                                   &trans    &trans   &trans     &trans
                         >;
                 };
