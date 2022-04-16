@@ -30,11 +30,11 @@
 #define CCOMMA 27
 
 &lt {
-    quick_tap_ms = <250>;
+    quick_tap_ms = <150>;
 };
 
 &mt {
-    quick_tap_ms = <250>;
+    quick_tap_ms = <150>;
 };
 
 / {
@@ -143,7 +143,7 @@
                         label = "HOMEROW_MODS";
                         #binding-cells = <2>;
                         tapping-term-ms = <250>;
-                        quick-tap-ms = <250>;
+                        quick-tap-ms = <150>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
@@ -152,8 +152,7 @@
                         label = "HOMEROW_LAYERS";
                         #binding-cells = <2>;
                         tapping-term-ms = <150>;
-                        // quick_tap_ms = <500>;
-                        quick-tap-ms = <250>;
+                        quick-tap-ms = <150>;
                         flavor = "tap-preferred";
                         bindings = <&mo>, <&kp>;
                 };
