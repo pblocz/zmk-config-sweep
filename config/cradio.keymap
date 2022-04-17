@@ -162,6 +162,18 @@
             };
     };
 
+    macros {
+        ZMK_MACRO(enie,
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N9>
+                , <&macro_release &kp LALT>
+                ;
+        )
+    };
+
     keymap {
             compatible = "zmk,keymap";
 
@@ -177,8 +189,8 @@
             num_mods {
                     bindings = <
     &mt F7 N7   &mt F8 N8   &mt F9 N9    &kp F11        &kp F12       &none        &none        &none        &none        &none
-    &mt F4 N4   &mt F5 N5   &mt F6 N6    &none          &none         &none        &kp HASH     &kp STAR     &kp CARET    &mt SEMI COLON
-    &mt F1 N1   &mt F2 N2   &mt F3 N3    &mt F10 N0     &none         &none        &none        &trans       &key_repeat       &trans
+    &mt F4 N4   &mt F5 N5   &mt F6 N6    &none          &none         &none        &kp CARET    &none        &none        &mt SEMI COLON
+    &mt F1 N1   &mt F2 N2   &mt F3 N3    &mt F10 N0     &none         &none        &enie        &none        &key_repeat  &trans
                                    &kp DEL  &kp TAB     &trans          &trans
                     >;
             };
