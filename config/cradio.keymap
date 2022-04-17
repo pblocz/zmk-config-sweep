@@ -163,7 +163,16 @@
     };
 
     macros {
-        ZMK_MACRO(enie,
+        ZMK_MACRO(enie_lower,
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N1>
+                , <&macro_release &kp LALT>
+                ;
+        )
+        ZMK_MACRO(enie_upper,
             wait-ms = <40>;
             tap-ms = <40>;
             bindings
@@ -190,7 +199,7 @@
                     bindings = <
     &mt F7 N7   &mt F8 N8   &mt F9 N9    &kp F11        &kp F12       &none        &none        &none        &none        &none
     &mt F4 N4   &mt F5 N5   &mt F6 N6    &none          &none         &none        &kp CARET    &none        &none        &mt SEMI COLON
-    &mt F1 N1   &mt F2 N2   &mt F3 N3    &mt F10 N0     &none         &none        &enie        &none        &key_repeat  &trans
+    &mt F1 N1   &mt F2 N2   &mt F3 N3    &mt F10 N0     &none         &enie_lower  &none        &none        &key_repeat  &trans
                                    &kp DEL  &kp TAB     &trans          &trans
                     >;
             };
