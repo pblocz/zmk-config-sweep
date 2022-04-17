@@ -186,7 +186,7 @@
                     label = "ENIE";
                     #binding-cells = <0>;
                     bindings = <&enie_lower>, <&enie_upper>;
-                    mods = <(MOD_LSHIFT | MOD_RSHIFT)>;
+                    mods = <(MOD_LSFT | MOD_RSFT)>;
             };
     };
 
