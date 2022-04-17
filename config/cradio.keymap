@@ -181,6 +181,13 @@
                     bindings = <&mt LSHIFT SPACE>, <&kp TAB>;
                     mods = <(MOD_LALT | MOD_RALT)>;
             };
+            enie: enie  {
+                    compatible = "zmk,behavior-mod-morph";
+                    label = "ENIE";
+                    #binding-cells = <0>;
+                    bindings = <&enie_lower>, <&enie_upper>;
+                    mods = <(MOD_LSHIFT | MOD_RSHIFT)>;
+            };
     };
 
 
@@ -200,7 +207,7 @@
                     bindings = <
     &mt F7 N7   &mt F8 N8   &mt F9 N9    &kp F11        &kp F12       &none        &none        &none        &none        &none
     &mt F4 N4   &mt F5 N5   &mt F6 N6    &none          &none         &none        &kp CARET    &none        &none        &mt SEMI COLON
-    &mt F1 N1   &mt F2 N2   &mt F3 N3    &mt F10 N0     &none         &enie_lower  &none        &none        &key_repeat  &trans
+    &mt F1 N1   &mt F2 N2   &mt F3 N3    &mt F10 N0     &none         &enie        &none        &none        &key_repeat  &trans
                                    &kp DEL  &kp TAB     &trans          &trans
                     >;
             };
