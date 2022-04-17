@@ -59,6 +59,13 @@
                 , <&macro_release &kp LALT>
                 ;
         )
+        ZMK_MACRO(at_at,
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp AT &kp AT>
+                ;
+        )
     };
 
     combos {
@@ -170,6 +177,13 @@
             key-positions = <CU CF>; // KP: U F
             bindings = <&kp STAR>;
             layers = <DEFAULT>;
+        };
+
+        combo_at_at {
+            timeout-ms = <50>;
+            key-positions = <CD CF>; // KP: D F
+            bindings = <&at_at>;
+            layers = <NUM_MODS>;
         };
     };
 
