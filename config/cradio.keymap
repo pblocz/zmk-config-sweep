@@ -67,91 +67,109 @@
             timeout-ms = <50>;
             key-positions = <CD CF>; // KP: D F
             bindings = <&kp AT>;
+            layers = <DEFAULT>;
         };
         combo_tab {
             timeout-ms = <50>;
             key-positions = <CJ CK>; // KP: J K
             bindings = <&kp TAB>;
+            layers = <DEFAULT>;
         };
         combo_lpar {
             timeout-ms = <50>;
             key-positions = <CD CV>; // KP: D V
             bindings = <&kp LPAR>;
+            layers = <DEFAULT>;
         };
         combo_rpar {
             timeout-ms = <50>;
             key-positions = <CK CM>; // KP: K M
             bindings = <&kp RPAR>;
+            layers = <DEFAULT>;
         };
         combo_minus {
             timeout-ms = <50>;
             key-positions = <CE CF>; // KP: E F
             bindings = <&mt UNDER MINUS>;
+            layers = <DEFAULT>;
         };
         combo_amps {
             timeout-ms = <50>;
             key-positions = <CF CJ>; // KP: F J
             bindings = <&kp AMPS>;
+            layers = <DEFAULT>;
         };
         combo_EXCL {
             timeout-ms = <50>;
             key-positions = <CG CH>; // KP: G H
             bindings = <&kp EXCL>;
+            layers = <DEFAULT>;
         };
         combo_equal {
             timeout-ms = <50>;
             key-positions = <CI CJ>; // KP: I J
             bindings = <&mt PLUS EQUAL>;
+            layers = <DEFAULT>;
         };
         combo_dollar {
             timeout-ms = <50>;
             key-positions = <CE CR>;
             bindings = <&kp DLLR>; // KP: E R
+            layers = <DEFAULT>;
         };
         combo_percent {
             timeout-ms = <50>;
             key-positions = <CU CI>; // KP: U I
             bindings = <&kp PRCNT>;
+            layers = <DEFAULT>;
         };
         combo_grave {
             timeout-ms = <50>;
             key-positions = <CM CCOMMA>; // KP: M ,
             bindings = <&mt TILDE GRAVE>;
+            layers = <DEFAULT>;
         };
         combo_pipe {
             timeout-ms = <50>;
             key-positions = <CC CV>; // KP: C V
             bindings = <&mt BSLH PIPE>;
+            layers = <DEFAULT>;
         };
         combo_lbkt2 {
             timeout-ms = <50>;
             key-positions = <CD CG>; // KP: D G
             bindings = <&mt LBRC LBKT>;
+            layers = <DEFAULT>;
         };
         combo_rbkt2 {
             timeout-ms = <50>;
             key-positions = <CH CK>; // KP: H K
             bindings = <&mt RBRC RBKT>;
+            layers = <DEFAULT>;
         };
         combo_under {
             timeout-ms = <50>;
             key-positions = <CR CD>; // KP: R D
             bindings = <&kp UNDER>;
+            layers = <DEFAULT>;
         };
         combo_plus {
             timeout-ms = <50>;
             key-positions = <CU CK>; // KP: U K
             bindings = <&kp PLUS>;
+            layers = <DEFAULT>;
         };
         combo_hash {
             timeout-ms = <50>;
             key-positions = <CR CJ>; // KP: R J
             bindings = <&kp HASH>;
+            layers = <DEFAULT>;
         };
         combo_star {
             timeout-ms = <50>;
             key-positions = <CU CF>; // KP: U F
             bindings = <&kp STAR>;
+            layers = <DEFAULT>;
         };
     };
 
