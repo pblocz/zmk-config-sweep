@@ -16,6 +16,7 @@
 
 #define CE 2
 #define CR 3
+#define CT 4
 #define CU 6
 #define CI 7
 #define CD 12
@@ -184,6 +185,12 @@
             key-positions = <CD CF>; // KP: D F
             bindings = <&at_at>;
             layers = <NUM_MODS>;
+        };
+         combo_esc {           
+            timeout-ms = <50>;
+            key-positions = <CD CT>; // KP: D T
+            bindings = <&mt LSHIFT ESC>;
+            layers = <DEFAULT>;
         };
     };
 
