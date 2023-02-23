@@ -200,6 +200,18 @@
             key-positions = <CU CI CO CP>; // KP: U I O P
             bindings = <&to DEFAULT>;
         };
+        combo_factorio_tab {
+            timeout-ms = <100>;
+            key-positions = <CF CG>; // KP: F G
+            bindings = <&kp TAB>;
+            layers = <FACTORIO_LAYER>;
+        };
+        combo_factorio_esc {
+            timeout-ms = <100>;
+            key-positions = <CE CR>; // KP: E R
+            bindings = <&kp ESC>;
+            layers = <FACTORIO_LAYER>;
+        };
     };
 
     behaviors {
