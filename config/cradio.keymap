@@ -202,7 +202,7 @@
         };
         combo_factorio_tab {
             timeout-ms = <100>;
-            key-positions = <CF CG>; // KP: F G
+            key-positions = <CD CF>; // KP: D F
             bindings = <&kp TAB>;
             layers = <FACTORIO_LAYER>;
         };
