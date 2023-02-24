@@ -282,9 +282,9 @@
 
             factorio_layer {
                     bindings = <
-    &kp LALT    &kp ENTER  &kp W     &kp E       &kp R             &kp PLUS      &kp N0     &kp N1        &kp N2      &kp N3
-    &kp SPACE   &kp A      &kp S     &kp D       &kp Q             &kp MINUS     &none      &kp N4        &kp N5      &kp N6
-    &kp Z       &kp X      &kp C     &kp F       &kp B             &none         &none      &kp N7        &kp N8      &kp N9
+    &kp LALT    &kp ENTER  &kp W     &kp E       &kp R             &kp N1     &kp N2      &kp N3        &kp N4        &kp N5   
+    &kp SPACE   &kp A      &kp S     &kp D       &kp Q             &kp N6     &kp N7      &kp N8      &kp N9        &kp N0       
+    &kp Z       &kp X      &kp C     &kp F       &kp B             &kp TAB    &kp T          &none       &kp PLUS      &kp MINUS
                           &kp LCTRL    &kp LSHIFT                  &none    &none
                     >;
             };
